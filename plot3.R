@@ -18,10 +18,9 @@ elec$Sub_metering_2 <- as.numeric(as.character(elec$Sub_metering_2))
 elec$Sub_metering_3 <- as.numeric(as.character(elec$Sub_metering_3))
 
 ## Create plot with axis-labels 
-plot(elec$Date_Time, elec$Sub_metering_1, type = "n", 
+plot(elec$Date_Time, elec$Sub_metering_1, type = "l", 
      xlab = "", ylab = "Energy sub metering")
 ## Add lines
-lines(elec$Date_Time, elec$Sub_metering_1)
 lines(elec$Date_Time, elec$Sub_metering_2, col = "red")
 lines(elec$Date_Time, elec$Sub_metering_3, col = "blue")
 ## Add legends
